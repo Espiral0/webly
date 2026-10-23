@@ -1,0 +1,1787 @@
+<!DOCTYPE html><html lang="es" class="scroll-smooth" style=""><head></head><body><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webly | Tu web profesional, lista en 48 horas</title>
+  <meta name="description" content="Diseño, textos, imágenes y dominio incluidos para tu negocio o marca personal. Sin cuotas mensuales. Entrega en 48 horas.">
+  <link rel="canonical" href="https://webly.es">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webly | Tu web profesional, lista en 48 horas">
+  <meta property="og:description" content="Diseño a medida, textos redactados, imágenes y dominio incluidos. Sin cuotas mensuales. Desde 380 € + IVA.">
+  <meta property="og:url" content="https://webly.es">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B3DF5'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='120' height='120' rx='34' fill='url(%23g)'/%3E%3Cpath d='M38 46 L53 96 L70 64 L87 96 L102 46' fill='none' stroke='%23FFFFFF' stroke-width='11' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='70' cy='40' r='6.5' fill='%23FFFFFF'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    /* VARIABLES & RESET */
+    :root {
+      --color-primary: #5B3DF5;
+      --color-primary-hover: #4b2fe0;
+      --color-accent: #22D3EE;
+      --color-dark: #0F172A;
+      --color-text-muted: #64748B;
+      --color-bg-light: #F8FAFC;
+      --color-white: #FFFFFF;
+      --gradient-main: linear-gradient(135deg, #5B3DF5 0%, #22D3EE 100%);
+      --gradient-subtle: linear-gradient(135deg, rgba(91, 61, 245, 0.08) 0%, rgba(34, 211, 238, 0.08) 100%);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 10px 25px -3px rgba(91, 61, 245, 0.12), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 20px 35px -5px rgba(91, 61, 245, 0.18), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      --shadow-glow: 0 0 35px rgba(91, 61, 245, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--color-dark);
+      background-color: var(--color-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+    }
+
+    button, input, textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TYPOGRAPHY HELPERS */
+    .title-gradient {
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--gradient-subtle);
+      border: 1px solid rgba(91, 61, 245, 0.2);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gradient-main);
+      color: var(--color-white);
+      box-shadow: 0 8px 20px rgba(91, 61, 245, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(91, 61, 245, 0.45);
+      color: var(--color-white);
+    }
+
+    .btn-secondary {
+      background: #FFFFFF;
+      color: var(--color-dark);
+      border: 1.5px solid #E2E8F0;
+    }
+
+    .btn-secondary:hover {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(37, 211, 102, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* HEADER & NAVIGATION */
+    header.sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid #F1F5F9;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+    }
+
+    .logo-container svg {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #334155;
+    }
+
+    .nav-link:hover {
+      color: var(--color-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--color-dark);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 80px 0 100px;
+      background: radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.12) 0%, rgba(255, 255, 255, 0) 60%),
+                  radial-gradient(circle at 10% 70%, rgba(91, 61, 245, 0.08) 0%, rgba(255, 255, 255, 0) 50%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: var(--color-dark);
+    }
+
+    .hero-text p.hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      margin-bottom: 36px;
+      max-width: 540px;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #E2E8F0;
+    }
+
+    .hero-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #475569;
+    }
+
+    /* CSS / SVG ILLUSTRATION MOCKUP */
+    .mockup-wrapper {
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .mockup-window {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 25px 50px -12px rgba(91, 61, 245, 0.22), 0 12px 24px -8px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      transform: rotateY(-3deg) rotateX(2deg);
+      transition: transform 0.5s ease;
+    }
+
+    .mockup-window:hover {
+      transform: rotateY(0deg) rotateX(0deg) translateY(-6px);
+    }
+
+    .mockup-bar {
+      background: #F1F5F9;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .mockup-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .mockup-dot.red { background: #EF4444; }
+    .mockup-dot.yellow { background: #F59E0B; }
+    .mockup-dot.green { background: #10B981; }
+
+    .mockup-address {
+      flex: 1;
+      max-width: 260px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border-radius: var(--radius-full);
+      padding: 4px 14px;
+      font-size: 0.75rem;
+      color: #64748B;
+      text-align: center;
+      border: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .mockup-screen {
+      padding: 24px;
+      background: linear-gradient(180deg, #FAFAFE 0%, #FFFFFF 100%);
+    }
+
+    /* Mockup inner website wireframe */
+    .mock-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+    .mock-logo {
+      width: 60px;
+      height: 14px;
+      background: var(--gradient-main);
+      border-radius: 4px;
+    }
+    .mock-nav {
+      display: flex;
+      gap: 10px;
+    }
+    .mock-nav-item {
+      width: 32px;
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 4px;
+    }
+    .mock-hero-banner {
+      background: var(--gradient-subtle);
+      border: 1px solid rgba(91, 61, 245, 0.15);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .mock-title {
+      height: 18px;
+      width: 75%;
+      background: var(--color-dark);
+      border-radius: 6px;
+      margin: 0 auto 10px;
+    }
+    .mock-sub {
+      height: 10px;
+      width: 50%;
+      background: #94A3B8;
+      border-radius: 4px;
+      margin: 0 auto 16px;
+    }
+    .mock-btn {
+      height: 28px;
+      width: 90px;
+      background: var(--gradient-main);
+      border-radius: 6px;
+      margin: 0 auto;
+    }
+    .mock-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .mock-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-sm);
+      padding: 14px;
+    }
+    .mock-card-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(34, 211, 238, 0.2);
+      margin-bottom: 10px;
+    }
+    .mock-card-line {
+      height: 8px;
+      background: #CBD5E1;
+      border-radius: 3px;
+      margin-bottom: 6px;
+    }
+    .mock-card-line.short { width: 60%; }
+
+    /* Floating badges on hero mockup */
+    .float-chip {
+      position: absolute;
+      background: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+      border: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      animation: float 4s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    .float-chip-1 {
+      top: -18px;
+      left: -20px;
+      animation-delay: 0s;
+    }
+
+    .float-chip-2 {
+      bottom: -15px;
+      right: -15px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* SECTION STYLES */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--color-text-muted);
+      font-size: 1.125rem;
+    }
+
+    /* SECTION: QUÉ INCLUYE */
+    #incluye {
+      background: var(--color-bg-light);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .feature-card {
+      background: var(--color-white);
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(91, 61, 245, 0.3);
+    }
+
+    .feature-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-subtle);
+      border: 1px solid rgba(91, 61, 245, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--color-primary);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+
+    .highlight-quote-box {
+      background: var(--gradient-main);
+      border-radius: var(--radius-lg);
+      padding: 32px 40px;
+      text-align: center;
+      color: var(--color-white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .highlight-quote-box p {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    /* SECTION: PLAZO (48H) */
+    .plazo-section {
+      padding: 70px 0;
+      background: var(--color-white);
+    }
+
+    .plazo-card {
+      background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+      border-radius: var(--radius-lg);
+      padding: 60px 48px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plazo-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .plazo-content h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .plazo-content p {
+      font-size: 1.15rem;
+      color: #CBD5E1;
+      max-width: 520px;
+    }
+
+    .plazo-badge-big {
+      background: var(--gradient-main);
+      padding: 24px 44px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(91, 61, 245, 0.4);
+      flex-shrink: 0;
+    }
+
+    .plazo-badge-big .number {
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      display: block;
+      letter-spacing: -0.03em;
+    }
+
+    .plazo-badge-big .label {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    /* SECTION: CÓMO FUNCIONA */
+    #como-funciona {
+      background: var(--color-bg-light);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+
+    .step-card {
+      background: var(--color-white);
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(91, 61, 245, 0.3);
+    }
+
+    .step-number-tag {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .step-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+
+    .step-card p {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+    }
+
+    /* SECTION: PRECIO */
+    #precio {
+      background: var(--color-white);
+    }
+
+    .pricing-card-wrapper {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: #FFFFFF;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: 48px 44px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      text-align: center;
+    }
+
+    .pricing-tag {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-main);
+      color: #FFFFFF;
+      padding: 6px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(91, 61, 245, 0.3);
+    }
+
+    .price-value-box {
+      margin: 20px 0 10px;
+    }
+
+    .price-amount {
+      font-size: 3.25rem;
+      font-weight: 800;
+      color: var(--color-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .price-disclaimer {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+    }
+
+    .price-features-list {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 36px;
+      padding: 24px 0;
+      border-top: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .price-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #334155;
+    }
+
+    .price-features-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-icon {
+      color: #10B981;
+      flex-shrink: 0;
+    }
+
+    /* SECTION: PREGUNTAS FRECUENTES (FAQ) */
+    #faq {
+      background: var(--color-bg-light);
+    }
+
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .faq-item.active {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-icon-arrow {
+      transition: transform 0.3s ease;
+      color: var(--color-primary);
+    }
+
+    .faq-item.active .faq-icon-arrow {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: var(--color-text-muted);
+      font-size: 0.98rem;
+      padding: 0 28px;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 28px 24px;
+      max-height: 250px;
+    }
+
+    /* SECTION: CONTACTO */
+    #contacto {
+      background: var(--color-white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 56px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-info-col h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .contact-info-col p {
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+    }
+
+    .contact-cards-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .direct-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--color-bg-light);
+      border-radius: var(--radius-md);
+      border: 1px solid #E2E8F0;
+      transition: all 0.2s ease;
+    }
+
+    .direct-contact-item:hover {
+      background: #FFFFFF;
+      border-color: var(--color-primary);
+      transform: translateX(4px);
+    }
+
+    .contact-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient-subtle);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .direct-contact-item .label {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+    }
+
+    .direct-contact-item .value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+
+    /* FORM STYLES */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid #E2E8F0;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      background: #FFFFFF;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(91, 61, 245, 0.15);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: var(--color-dark);
+      color: #94A3B8;
+      padding: 70px 0 40px;
+      border-top: 1px solid #1E293B;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #1E293B;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 32px;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-contacts {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .footer-contacts a {
+      color: #CBD5E1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-contacts a:hover {
+      color: var(--color-accent);
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-floating {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .whatsapp-floating:hover {
+      transform: scale(1.08) translateY(-4px);
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.55);
+      color: #FFFFFF;
+    }
+
+    /* ANIMATIONS ON SCROLL */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 36px 24px;
+      }
+      .hero-text h1 {
+        font-size: 2.75rem;
+      }
+      .plazo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 28px;
+      }
+      .plazo-content p {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 84px;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 20px;
+        border-bottom: 1px solid #E2E8F0;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+      }
+      .nav-menu.open {
+        transform: translateY(0);
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .header-actions .btn {
+        display: none;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-text h1 {
+        font-size: 2.25rem;
+      }
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-cta .btn {
+        width: 100%;
+      }
+      .float-chip {
+        display: none;
+      }
+      .pricing-card {
+        padding: 40px 24px;
+      }
+      .footer-top, .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+
+
+  <!-- CABECERA FIJA (STICKY) -->
+  <header class="sticky-header" id="cabecera">
+    <div class="container header-content">
+      <a href="#" class="logo-container" aria-label="Webly Inicio">
+        <!-- Logo SVG exacto -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="520" height="140" role="img" aria-label="Webly">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5B3DF5"></stop>
+              <stop offset="1" stop-color="#22D3EE"></stop>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="120" height="120" rx="34" fill="url(#g)"></rect>
+          <path d="M38 46 L53 96 L70 64 L87 96 L102 46" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="70" cy="40" r="6.5" fill="#FFFFFF"></circle>
+          <text x="150" y="95" font-family="Poppins, Montserrat, 'Segoe UI', Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-2" fill="#0F172A">web<tspan fill="#5B3DF5">ly</tspan></text>
+        </svg>
+      </a>
+
+      <!-- Menú de navegación -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class=""><a href="#incluye" class="nav-link">Qué incluye</a></li><li class=""><a href="#ejemplos" class="nav-link">Ejemplos</a></li>
+          <li class=""><a href="#como-funciona" class="nav-link">Cómo funciona</a></li>
+          <li class=""><a href="#precio" class="nav-link">Precio</a></li>
+          <li class=""><a href="#equipo" class="nav-link">Equipo</a></li><li class=""><a href="#testimonios" class="nav-link">Opiniones</a></li><li class=""><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Pedir mi web</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero"><div style="position: absolute; inset: 0px; pointer-events: none; z-index: 0; overflow: hidden;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-GyOb4Np4DbeILhIsk-S-mAOpL7FtmWJRCOTH-uWmksvo6jKRCGZ3QbG_P65rqdqJw2rMfXt0xh3nw4dijJ7VdxxW_VV1GHiaRkFxAgI4QnmY0fx9HeN8A4R6Skw5rnwuNb7HUcSjeHukJPebW1a0XrluNiHfU9aBeZ0pCIwTMKhXqkTm9NBsNL1HenMR88dz7QGa6ugVDJG_OoQ9e1JwlgwWf_JGt4RDHE1bp29wm_loqPWSrU9b" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.38; filter: saturate(1.1); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);"></div>
+      <div class="container hero-grid" style="position: relative; z-index: 1;">
+        <div class="hero-text fade-in-up visible">
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            Lanzamiento exprés para tu negocio
+          </div>
+          <h1 class="">Tu web profesional, <br><span class="title-gradient">lista en 48 horas</span></h1>
+          <p class="hero-subtitle">Diseño, textos, imágenes y dominio incluidos. Sin cuotas mensuales.</p>
+          
+          <div class="hero-cta">
+            <a href="#contacto" class="btn btn-primary">Pedir mi web</a>
+            <a href="https://wa.me/34699516024" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"></path></svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3DF5" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Sin cuotas mensuales
+            </div>
+            <div class="hero-highlight-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3DF5" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Entrega en 48 horas
+            </div>
+            <div class="hero-highlight-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3DF5" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              100% Adaptada a ti
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCKUP ILUSTRACIÓN CSS/SVG -->
+        <div class="mockup-wrapper fade-in-up visible">
+          <div class="float-chip float-chip-1">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981;"></div>
+            <span class="">Dominio activo</span>
+          </div>
+
+          <div class="float-chip float-chip-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3DF5" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span class="">Entrega en 48 h</span>
+          </div>
+
+          <div class="mockup-window">
+            <div class="mockup-bar">
+              <div class="mockup-dot red"></div>
+              <div class="mockup-dot yellow"></div>
+              <div class="mockup-dot green"></div>
+              <div class="mockup-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                https://tu-negocio.com
+              </div>
+            </div>
+            <div class="mockup-screen">
+              <div class="mock-header">
+                <div class="mock-logo"></div>
+                <div class="mock-nav">
+                  <div class="mock-nav-item"></div>
+                  <div class="mock-nav-item"></div>
+                  <div class="mock-nav-item"></div>
+                </div>
+              </div>
+              <div class="mock-hero-banner">
+                <div class="mock-title"></div>
+                <div class="mock-sub"></div>
+                <div class="mock-btn"></div>
+              </div>
+              <div class="mock-cards">
+                <div class="mock-card">
+                  <div class="mock-card-icon"></div>
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line short"></div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-card-icon" style="background: rgba(91, 61, 245, 0.2);"></div>
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line short"></div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-card-icon"></div>
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line short"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: QUÉ INCLUYE -->
+    <section id="incluye">
+      <div class="container">
+        <div class="section-header fade-in-up visible">
+          <div class="badge">Servicio completo llave en mano</div>
+          <h2 class="">Todo lo necesario para empezar hoy</h2>
+          <p class="">Nos ocupamos de cada detalle para que tú solo tengas que compartir tu nueva web.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Tarjeta 1: Diseño a medida -->
+          <div class="feature-card fade-in-up visible">
+            <div class="feature-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="">Diseño a medida</h3>
+            <p class="">Estructura moderna y exclusiva, optimizada para ordenadores y móviles, alineada con tu identidad.</p>
+          </div>
+
+          <!-- Tarjeta 2: Textos redactados -->
+          <div class="feature-card fade-in-up visible">
+            <div class="feature-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="">Textos redactados</h3>
+            <p class="">Contenido claro y convincente redactado para tu propuesta, listo para conectar con tus clientes.</p>
+          </div>
+
+          <!-- Tarjeta 3: Imágenes -->
+          <div class="feature-card fade-in-up visible">
+            <div class="feature-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <h3 class="">Imágenes</h3>
+            <p class="">Selección visual cuidada y recursos gráficos adaptados al estilo de tu proyecto o actividad.</p>
+          </div>
+
+          <!-- Tarjeta 4: Dominio -->
+          <div class="feature-card fade-in-up visible">
+            <div class="feature-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="">Dominio</h3>
+            <p class="">Configuración e inclusión del dominio de tu web para que esté en internet sin complicaciones.</p>
+          </div>
+        </div>
+
+        <!-- Frase destacada -->
+        <div class="highlight-quote-box fade-in-up visible">
+          <p class="">“Todo se adapta a tu gusto: tú decides cómo quieres tu web.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PLAZO -->
+    <section class="plazo-section">
+      <div class="container">
+        <div class="plazo-card fade-in-up visible">
+          <div class="plazo-content">
+            <h2 class="">Entrega en unas 48 horas</h2>
+            <p class="">Sin esperas eternas ni procesos complejos. Tu presencia online estará activa y funcionando rápidamente para empezar a recibir visitas.</p>
+          </div>
+          <div class="plazo-badge-big">
+            <span class="number">48 h</span>
+            <span class="label">Plazo exprés</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: CÓMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-header fade-in-up visible">
+          <div class="badge">Proceso ágil y sin complicaciones</div>
+          <h2 class="">Cómo funciona</h2>
+          <p class="">Tres pasos sencillos para tener tu web lista para publicar.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Paso 1 -->
+          <div class="step-card fade-in-up visible">
+            <div class="step-number-tag">1</div>
+            <h3 class="">Cuéntanos tu idea</h3>
+            <p class="">Dinos a qué te dedicas, qué necesitas y el estilo que más te gusta para tu web.</p>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="step-card fade-in-up visible">
+            <div class="step-number-tag">2</div>
+            <h3 class="">Diseñamos tu web</h3>
+            <p class="">Preparamos la estructura completa: diseño personalizado, redacción y recursos visuales.</p>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="step-card fade-in-up visible">
+            <div class="step-number-tag">3</div>
+            <h3 class="">La recibes y la publicas</h3>
+            <p class="">Revisas el resultado final, aplicamos tus ajustes y tu web queda lista y publicada en internet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PRECIO -->
+    <section id="ejemplos" style="background: var(--color-white); padding: 100px 0px;"><div class="container"><div class="section-header fade-in-up visible"><div class="badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg> Casos reales y adaptables</div><h2 class="">Diseños pensados para enamorar a tus clientes</h2><p class="">Cada web se adapta por completo a la identidad, colores y estilo de tu sector o proyecto personal.</p></div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-bottom: 48px;"><div class="fade-in-up visible" style="background: var(--color-white); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: var(--shadow-sm);"><div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0F172A;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDReEmG8lUQTfjLnTWvUeXTdiX-mSoctccTS4nlB4JdvHClykdOuZchIhD00ahuMtdOE2Unavu45RxS2_IolXPd1UUY3TPaidlR1XrndaggQHWH0D_jzKoYVAeU3AVKZMVMZWaU08n1uU4cAJA8Xzf2TtVlJ9CUjl0BDTddpJ9hYBqAPpxPku_yUXjmPyebzI7OXL2WCBcny7s9qILL9sBchclfAc9c72kGMhGt1FmbC-xhlT3BlKYv" alt="Lumière Gastronomy - Web para hostelería y alta gastronomía" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div><div style="padding: 28px 24px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;"><div><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;"><span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: var(--gradient-subtle); padding: 4px 12px; border-radius: var(--radius-full); border: 1px solid rgba(91, 61, 245, 0.15);" class="">Hostelería &amp; Restauración</span><span style="font-size: 0.75rem; font-weight: 600; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 3px 8px; border-radius: var(--radius-full);" class="">100% Personalizable</span></div><h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-dark); margin-bottom: 10px;" class="">Lumière Gastronomy</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.55;" class="">Diseño elegante con reserva online, carta interactiva y fotografía culinaria cuidada.</p></div><div style="display: flex; align-items: center; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #F1F5F9; font-size: 0.85rem; color: #475569; font-weight: 500;" class=""><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Responsive &amp; Rápida</div></div></div><div class="fade-in-up visible" style="background: var(--color-white); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: var(--shadow-sm);"><div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0F172A;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmzEd2iAvCKziAfVHXIpl-6VSqwwldJJ50q6MQqy2jf8yOelrNSRwrIzm9RXtyj7wTWlqRB6Ed22tZVD6hZawNwK7FI6Ny8M_E2qzCFI147eiaM_Lo1_8ePv8rm2YeTeUlQeQi_IJn6QsIF148luT7S0u17zAcEJ2mJk8FmAeLxdz_2QMrqQaDd-cfIES5-IaM3nXyaaikPS-6nMkn83Fuat9A51ZWMWcHfEQGIJtRscYFfIQKGtDV" alt="The Azure Resort - Web para hotel boutique y turismo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div><div style="padding: 28px 24px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;"><div><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;"><span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: var(--gradient-subtle); padding: 4px 12px; border-radius: var(--radius-full); border: 1px solid rgba(91, 61, 245, 0.15);" class="">Hoteles &amp; Turismo</span><span style="font-size: 0.75rem; font-weight: 600; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 3px 8px; border-radius: var(--radius-full);" class="">100% Personalizable</span></div><h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-dark); margin-bottom: 10px;" class="">The Azure Resort</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.55;" class="">Página web para hotel boutique con motor de reservas y diseño visual inmersivo.</p></div><div style="display: flex; align-items: center; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #F1F5F9; font-size: 0.85rem; color: #475569; font-weight: 500;" class=""><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Responsive &amp; Rápida</div></div></div><div class="fade-in-up visible" style="background: var(--color-white); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: var(--shadow-sm);"><div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0F172A;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8JGJDRfINQH6jrBRjB5ZIc6_knr6De9VucJLE3a2IjwsJ_Hm1IT46TLrGfriOVG-OogysfzKeIagwxupYBFqHxrvuqiRHtAodJBS9uvjCzU83guwBFGqCdsZ1U4SQvo42a5cJvGFH6pnyRNyAqpsAqMDgTjCxAgIsS-pYYkbYo2ZNg6nXEwA5TVkWLqVmUcPRlWUofZXPeNvCZsprdoGmz5ZQWpS3XLYmBsdrS7RUMtPR9UBctZ23" alt="Studio Aethe - Web para estudio de arquitectura y diseño" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div><div style="padding: 28px 24px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;"><div><div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;"><span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: var(--gradient-subtle); padding: 4px 12px; border-radius: var(--radius-full); border: 1px solid rgba(91, 61, 245, 0.15);" class="">Arquitectura &amp; Interiorismo</span><span style="font-size: 0.75rem; font-weight: 600; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 3px 8px; border-radius: var(--radius-full);" class="">100% Personalizable</span></div><h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-dark); margin-bottom: 10px;" class="">Studio Aethe</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.55;" class="">Estudio de arquitectura contemporánea con catálogo de proyectos de estética minimalista.</p></div><div style="display: flex; align-items: center; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #F1F5F9; font-size: 0.85rem; color: #475569; font-weight: 500;" class=""><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Responsive &amp; Rápida</div></div></div></div><div class="fade-in-up visible" style="text-align: center; background: var(--color-bg-light); border: 1.5px dashed rgba(91, 61, 245, 0.25); border-radius: var(--radius-lg); padding: 28px 24px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;"><p style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark); margin: 0;" class="">¿Tienes otra idea o sector? Nos adaptamos al 100% a lo que necesites.</p><a href="#contacto" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.95rem;">Cuéntanos tu proyecto</a></div></div></section><section id="precio">
+      <div class="container">
+        <div class="section-header fade-in-up visible">
+          <div class="badge">Tarifa transparente</div>
+          <h2 class="">Inversión clara desde el primer día</h2>
+          <p class="">Una única inversión para poner en marcha tu presencia digital.</p>
+        </div>
+
+        <div class="pricing-card-wrapper fade-in-up visible">
+          <div class="pricing-card">
+            <div class="pricing-tag">Plan Completo</div>
+            <div class="price-value-box">
+              <div class="price-amount">Desde 380 € <span style="font-size: 1.5rem; font-weight: 600; color: #64748B;" class="">+ IVA</span></div>
+            </div>
+            <p class="price-disclaimer">El precio puede variar según las necesidades de tu proyecto.</p>
+
+            <ul class="price-features-list">
+              <li class="">
+                <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class=""><strong>Sin cuota mensual</strong> (propiedad 100% tuya)</span>
+              </li>
+              <li class="">
+                <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="">Diseño web a medida y responsive</span>
+              </li>
+              <li class="">
+                <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="">Textos redactados e imágenes incluidas</span>
+              </li>
+              <li class="">
+                <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="">Dominio configurado e incluido</span>
+              </li>
+              <li class="">
+                <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span class="">Entrega en unas 48 horas</span>
+              </li>
+            </ul>
+
+            <a href="#contacto" class="btn btn-primary" style="width: 100%;">Pedir presupuesto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRO EQUIPO -->
+    <section id="equipo" style="padding: 100px 0px; background: var(--color-white);">
+      <div class="container">
+        <div class="section-header fade-in-up visible">
+          <div class="badge">Nuestro equipo</div>
+          <h2>Personas reales detrás de tu web</h2>
+          <p>Un equipo pequeño, cercano y especializado que se encarga de todo: diseño, textos y puesta en marcha, para que tú solo te ocupes de tu negocio.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+          <div class="fade-in-up visible" style="background: var(--color-bg-light); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm);">
+            <div style="width: 84px; height: 84px; margin: 0 auto 18px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; color: var(--color-primary);">RH</div>
+            <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-dark);">Rodrigo Hernández</div>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); margin: 4px 0 12px;">CEO y director principal</div>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.55;">Lidera la empresa, define la visión de Webly y se asegura de que cada proyecto salga adelante con la máxima calidad.</p>
+          </div>
+
+          <div class="fade-in-up visible" style="background: var(--color-bg-light); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm);">
+            <div style="width: 84px; height: 84px; margin: 0 auto 18px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; color: var(--color-primary);">IV</div>
+            <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-dark);">Ignacio Vega</div>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); margin: 4px 0 12px;">Gestión de finanzas</div>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.55;">Cuida de las cuentas y mantiene precios claros y sin sorpresas, para que cada inversión tenga sentido.</p>
+          </div>
+
+          <div class="fade-in-up visible" style="background: var(--color-bg-light); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm);">
+            <div style="width: 84px; height: 84px; margin: 0 auto 18px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; color: var(--color-primary);">AY</div>
+            <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-dark);">Adrián Yagüe</div>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); margin: 4px 0 12px;">Encargado de publicidad</div>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.55;">Da visibilidad a tu negocio y se encarga de que más clientes lleguen a conocer tu nueva web.</p>
+          </div>
+
+          <div class="fade-in-up visible" style="background: var(--color-bg-light); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm);">
+            <div style="width: 84px; height: 84px; margin: 0 auto 18px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; color: var(--color-primary);">JL</div>
+            <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-dark);">Julio Lozano</div>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); margin: 4px 0 12px;">Atención al cliente</div>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.55;">Resuelve tus dudas y te acompaña antes, durante y después del lanzamiento de tu web.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: OPINIONES -->
+    <section id="testimonios"style="background: var(--color-bg-light); padding: 100px 0px;" class="">
+  <div class="container">
+    <div class="section-header fade-in-up visible">
+      <div class="badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        Opiniones reales
+      </div>
+      <h2 class="">Clientes satisfechos</h2>
+      <p class="">Descubre lo que opinan profesionales y negocios que ya han lanzado su web con nosotros.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;">
+      <!-- Testimonio 1 -->
+      <div class="fade-in-up visible" style="background: var(--color-white); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
+            <div style="display: flex; gap: 4px; color: #F59E0B;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span style="font-size: 0.78rem; font-weight: 600; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: 4px;" class="">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Web verificada
+            </span>
+          </div>
+          <p style="font-size: 1.05rem; color: #334155; line-height: 1.6; margin-bottom: 24px;" class="">“En 48 horas exactas tenía mi web publicada y lista para vender. El diseño superó mis expectativas y el trato fue insuperable.”</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid #F1F5F9; padding-top: 18px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary); font-size: 0.95rem;" class="">MR</div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.98rem; color: var(--color-dark);" class="">Marcos Ramírez</div>
+            <div style="font-size: 0.82rem; color: var(--color-text-muted);" class="">Fisioterapia &amp; Salud</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div class="fade-in-up visible" style="background: var(--color-white); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
+            <div style="display: flex; gap: 4px; color: #F59E0B;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span style="font-size: 0.78rem; font-weight: 600; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: 4px;" class="">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Web verificada
+            </span>
+          </div>
+          <p style="font-size: 1.05rem; color: #334155; line-height: 1.6; margin-bottom: 24px;" class="">“La atención fue impecable y no tuve que preocuparme de redactar nada. Captaron el estilo exacto que buscaba para mi estudio desde el minuto uno.”</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid #F1F5F9; padding-top: 18px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary); font-size: 0.95rem;" class="">CG</div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.98rem; color: var(--color-dark);" class="">Clara Gómez</div>
+            <div style="font-size: 0.82rem; color: var(--color-text-muted);" class="">Arquitectura de Interiores</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 3 -->
+      <div class="fade-in-up visible" style="background: var(--color-white); border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
+            <div style="display: flex; gap: 4px; color: #F59E0B;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span style="font-size: 0.78rem; font-weight: 600; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: 4px;" class="">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Web verificada
+            </span>
+          </div>
+          <p style="font-size: 1.05rem; color: #334155; line-height: 1.6; margin-bottom: 24px;" class="">“Excelente inversión, sin complicaciones ni cuotas mensuales. Ya he conseguido nuevos clientes gracias a la rapidez y profesionalidad de la web.”</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid #F1F5F9; padding-top: 18px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-subtle); border: 1px solid rgba(91, 61, 245, 0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary); font-size: 0.95rem;" class="">JA</div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.98rem; color: var(--color-dark);" class="">Javier Alarcón</div>
+            <div style="font-size: 0.82rem; color: var(--color-text-muted);" class="">Consultoría Financiera</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section id="faq">
+      <div class="container">
+        <div class="section-header fade-in-up visible">
+          <div class="badge">Resolvemos tus dudas</div>
+          <h2 class="">Preguntas frecuentes</h2>
+          <p class="">Todo lo que necesitas saber antes de empezar tu página web.</p>
+        </div>
+
+        <div class="faq-accordion fade-in-up visible">
+          <!-- Pregunta 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              <span class="">¿Qué incluye el precio?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              El precio incluye el diseño web adaptado a tu estilo, la redacción de los textos, las imágenes y el dominio configurado. Todo preparado para publicar.
+            </div>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="">¿En cuánto tiempo la recibo?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              La entrega se realiza en unas 48 horas una vez definidos los detalles básicos de tu proyecto.
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="">¿Puedo pedir cambios o elegir el estilo?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Sí. Todo se adapta a tu gusto: tú decides cómo quieres tu web y cómo debe lucir cada elemento.
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="">¿Hay cuotas mensuales?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              No. Sin cuotas mensuales ni suscripciones obligatorias.
+            </div>
+          </div>
+
+          <!-- Pregunta 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="">¿Para qué tipo de negocio sirve?</span>
+              <svg class="faq-icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Sirve para cualquier tipo de negocio, profesional independiente o persona que quiera presentar sus servicios o proyectos de forma profesional en internet.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: CONTACTO -->
+    <section id="contacto">
+      <div class="container">
+        <div class="contact-grid fade-in-up visible">
+          <!-- Columna info y vías directas -->
+          <div class="contact-info-col">
+            <h3 class="">Hablemos de tu nueva web</h3>
+            <p class="">Cuéntanos tu proyecto y te responderemos de inmediato para ponernos manos a la obra.</p>
+
+            <div class="contact-cards-group">
+              <!-- Teléfono -->
+              <a href="tel:+34699516024" class="direct-contact-item">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <span class="label">Teléfono directo</span>
+                  <span class="value">+34 699 516 024</span>
+                </div>
+              </a>
+
+              <!-- Correo -->
+              <a href="mailto:zenvorabussines@gmail.com" class="direct-contact-item">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <span class="label">Correo electrónico</span>
+                  <span class="value">zenvorabussines@gmail.com</span>
+                </div>
+              </a>
+            </div>
+
+            <a href="https://wa.me/34699516024" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"></path></svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <!-- Formulario con acción mailto automática -->
+          <div>
+            <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="nombre" class="">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o empresa" required="">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required="">
+              </div>
+
+              <div class="form-group">
+                <label for="telefono" class="">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" required="">
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje" class="">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué tipo de web necesitas..." required=""></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <!-- Logo con texto en blanco para fondo oscuro -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="220" height="59" role="img" aria-label="Webly">
+            <defs>
+              <linearGradient id="g-footer" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#5B3DF5"></stop>
+                <stop offset="1" stop-color="#22D3EE"></stop>
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="120" height="120" rx="34" fill="url(#g-footer)"></rect>
+            <path d="M38 46 L53 96 L70 64 L87 96 L102 46" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="70" cy="40" r="6.5" fill="#FFFFFF"></circle>
+            <text x="150" y="95" font-family="Poppins, Montserrat, 'Segoe UI', Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-2" fill="#FFFFFF">web<tspan fill="#22D3EE">ly</tspan></text>
+          </svg>
+          <p style="margin-top: 10px; font-size: 0.95rem; color: #94A3B8;" class="">Páginas web profesionales listas en 48 horas.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <a href="tel:+34699516024" class="">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +34 699 516 024
+          </a>
+          <a href="mailto:zenvorabussines@gmail.com" class="">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            zenvorabussines@gmail.com
+          </a>
+          <a href="https://wa.me/34699516024" target="_blank" rel="noopener noreferrer" class="">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"></path></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="">© 2026 Webly. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/34699516024" target="_blank" rel="noopener noreferrer" class="whatsapp-floating" aria-label="Escribir por WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"></path></svg>
+  </a>
+
+  <!-- JAVASCRIPT VANILLA -->
+  <script>
+    // Menú móvil desplegable
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Acordeón de FAQ
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Cerrar todos los demás
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('active');
+          other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Alternar el actual
+        if (!isActive) {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Envío del formulario vía mailto automático
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      const subject = encodeURIComponent(`Solicitud de web - ${nombre}`);
+      const body = encodeURIComponent(
+        `Hola Webly,\n\nQuiero solicitar información para mi página web:\n\n` +
+        `• Nombre: ${nombre}\n` +
+        `• Correo: ${email}\n` +
+        `• Teléfono: ${telefono}\n` +
+        `• Detalles del proyecto:\n${mensaje}\n\n` +
+        `Espero vuestra respuesta. ¡Gracias!`
+      );
+
+      // Redirección mailto nativa
+      window.location.href = `mailto:zenvorabussines@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // Animación suave de aparición al hacer scroll (IntersectionObserver)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+  </script>
+
+
+
+
+
+
+</body></html>
